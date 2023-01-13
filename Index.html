@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOLICITUD DE DISEÑOS PRIORIDAD</title>
+</head>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+
+
+<body>
+
+    <!------------------------------  Boton de Manual flotante -------------------------->
+
+    <script src="https://kit.fontawesome.com/e64aa124f5.js" crossorigin="anonymous"></script>
+
+    <a href="https://docs.google.com/document/d/12NqGyAy0njj2HOcJH2jQvDe1Prl4iBwRv9WRKQz2vRM/edit" target="_blank"
+        class="btn-ayuda" data-bs-toggle="tooltip" data-bs-placement="top" title="Manual">
+        <i class="fa-solid fa-book"></i>
+    </a>
+
+    <style>
+        /*------------------------------- # btn-ayuda -------------------------------------*/
+
+        .btn-ayuda {
+            position: fixed;
+            width: 55px;
+            height: 55px;
+            line-height: 55px;
+            background: #f3f5fa;
+            border-radius: 50px;
+            bottom: 30px;
+            right: 30px;
+            color: #0c3c53;
+            font-size: 30px;
+            text-align: center;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+        }
+    </style>
+
+    <!----------------------------------------------------------------------------------->
+
+    <!------------------------------- Alerta del Manual Toast ------------------------>
+    <div class="col-12">
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1">
+            <div id="liveToast" class="toast hide text-bg-danger" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <strong class="me-auto">AYUDA</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    Manual de Funcionamiento
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------------------------------------------------------------------->
+
+
+    <div class="container-xxl text-center">
+
+        <div class="row p-2" style="background-color: #335EFF;">
+            <!-- HEADER-->
+            <div class="col-12 rounded bg-white">
+                <div class="row align-items-start">
+                    <div class="col-4 align-self-center">
+
+                        <img src='https://i.postimg.cc/rFYhmWT9/logo-GPSfull.png' border='0' alt='logo-GPSfull'
+                            class="img-fluid " style="max-height: 100px" />
+
+                    </div>
+
+                    <div class="col-6 align-self-center">
+                        <h3 style="color:black">SOLICITUD DE DISEÑOS PRIORIDAD</h3>
+                    </div>
+
+                    <div class="col-2 align-self-center d-none d-md-block">
+                        <h5 style="color:black">Al servicio de</h5>
+                        <img src="https://i.postimg.cc/gcsSCQBQ/telecentro-350x183.png" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- --------------------------------------BODY------------------------------------------------------------>
+            <div class="col-md-8 pt-3 pb-5" style="background-color: #C2CAE5;">
+                <!--<form onsubmit="alert('submit!');return false"></form>--->
+                <form id="FORMULARIO" class="row g-2 needs-validation" onsubmit="return false" novalidate>
+
+                    <div class="col-12 position-relative">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Ingrese el ID"
+                                aria-label="Ingrese el ID" aria-describedby="BUSCAR" id="ID" required>
+                            <div class="invalid-tooltip">
+                                ¡Debes ingresar un numero de ID!
+                            </div>
+                            <button class="btn btn-primary" type="button" id="BUSCAR" disabled>Buscar</button>
+                        </div>
+                    </div>
+
+                    <div class="col-12 position-relative">
+                        <div class="row">
+                            <label for="DESPACHO" class="col-3 col-form-label text-start">Despacho:</label>
+                            <div class="col-5">
+                                <input class="form-control" list="datalistOptions" id="DESPACHO"
+                                    placeholder="Nombre Dispacher" required>
+                                <datalist id="datalistOptions">
+                                    <option value="ALEJANDRO">ALEJANDRO</option>
+                                    <option value="ANDREINA">ANDREINA</option>
+                                    <option value="DIEGO">DIEGO</option>
+                                    <option value="EDUARDO">EDUARDO</option>
+                                    <option value="FERNANDO">FERNANDO</option>
+                                    <option value="GONZALO">GONZALO</option>
+                                    <option value="JOSE">JOSE</option>
+                                    <option value="LUCIANO">LUCIANO</option>
+                                    <option value="MAURO">MAURO</option>
+                                    <option value="OMAR">OMAR</option>
+                                    <option value="RENATO">RENATO</option>
+                                </datalist>
+                                <div class="invalid-tooltip">
+                                    ¡Debes Indicar el nombre del dispacher que hace la solicitud!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 position-relative">
+                        <div class="row">
+                            <label for="NODO" class="col-3 col-form-label text-start">Nodo:</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" id="NODO" placeholder="Ingrese el Nodo"
+                                    required>
+                                <div class="invalid-tooltip">
+                                    ¡Debes ingresar el Nodo!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 position-relative">
+                        <div class="row">
+                            <label for="DIRECCION" class="col-3 col-form-label text-start">Dirección:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="DIRECCION"
+                                    placeholder="Ingrese la Dirección" required>
+                                <div class="invalid-tooltip">
+                                    ¡Debes ingresar la Dirección!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 position-relative">
+                        <div class="row">
+                            <label for="DISENO" class="col-3 col-form-label text-start">Tipo de Diseño:</label>
+                            <div class="col-5">
+                                <select id="DISENO" class="form-select" placeholder="Seleccione" required>
+                                    <option selected disabled value="">Seleccione una opcion</option>
+                                    <option value="ONLINE">ONLINE</option>
+                                    <option value="EXPRESS">EXPRESS</option>
+                                    <option value="PRIORIDAD">PRIORIDAD</option>
+                                </select>
+                                <div class="invalid-tooltip">
+                                    ¡Debes Seleccionar el Tipo de Diseño a Solicitar!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 position-relative">
+                        <div class="row">
+                            <label for="GESTION" class="col-3 col-form-label text-start">Tipo de Gestion:</label>
+                            <div class="col-5">
+                                <select id="GESTION" class="form-select" required>
+                                    <option selected disabled value="">Seleccione una opcion</option>
+                                    <option value="ARMADO">ARMADO</option>
+                                    <option value="NORMALIZADO">NORMALIZADO</option>
+                                    <option value="RECONVERSION">RECONVERSION</option>
+                                </select>
+                                <div class="invalid-tooltip">
+                                    ¡Debes Seleccionar el Tipo de Gestion a Solicitar!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 position-relative">
+                        <div class="row">
+                            <label for="CONTRATISTA" class="col-3 col-form-label text-start">Contratista:</label>
+                            <div class="col-5">
+                                <input class="form-control" list="datalistOptions1" id="CONTRATISTA"
+                                    placeholder="Nombre Contratista" required>
+                                <datalist id="datalistOptions1">
+                                    <option value="DLL">DLL</option>
+                                    <option value="EPICA">EPICA</option>
+                                    <option value="MK">MK</option>
+                                    <option value="PEBCOM">PEBCOM</option>
+                                    <option value="RD CONSTRUCCIONES">RD CONSTRUCCIONES</option>
+                                    <option value="SANDERNET">SANDERNET</option>
+                                    <option value="SICSA">SICSA</option>
+                                    <option value="SUR RED">SUR RED</option>
+                                    <option value="SURREBE">SURREBE</option>
+                                    <option value="Comercial">Comercial</option>
+                                    <option value="Personal Propio">Personal Propio</option>
+                                    <option value="Otro">Otro</option>
+                                </datalist>
+                                <div class="invalid-tooltip">
+                                    ¡Debes Seleccionar la Contratista asignada!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 position-relative ">
+                        <div class="row">
+                            <label for="TECNICO" class="col-3 col-form-label text-start">Tecnico:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="TECNICO"
+                                    placeholder="Ingresar el Tecnico asignado" required>
+                                <div class="invalid-tooltip">
+                                    ¡Debes ingresar el Tecnico asignado!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 position-relative pt-2">
+                        <div class="row">
+                            <label class="col-sm-3 col-form-label text-start">Comentario:</label>
+                            <div id="COMENTARIO" class="col-sm-9 text-start">
+                                <div class="form-check form-check-inline form-switch">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" role="switch"
+                                        id="inlineCheckbox1" value="1" checked required>
+                                    <label class="form-check-label" for="inlineCheckbox1">Agendado</label>
+                                </div>
+                                <div class="form-check form-check-inline form-switch">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" role="switch"
+                                        id="inlineCheckbox2" value="2" required>
+                                    <label class="form-check-label" for="inlineCheckbox2">Tecnico en Camino</label>
+                                </div>
+                                <div class="form-check form-check-inline form-switch">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" role="switch"
+                                        id="inlineCheckbox3" value="3" required>
+                                    <label class="form-check-label" for="inlineCheckbox3">Tecnico en sitio</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 position-relative">
+                        <div class="row">
+                            <label for="FECHA" class="col-3 col-form-label text-start">Fecha</label>
+                            <div class="col-5">
+                                <input id="FECHA" type="date" class="form-control" required>
+                                <div class="invalid-tooltip">
+                                    ¡Debes Seleccionar la Fecha!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 position-relative">
+                        <div class="row">
+                            <label for="HORA1" class="col-3 col-form-label text-start">Franja Horaria</label>
+                            <div class="col-2">
+                                <input id="HORA1" type="text" class="form-control" required>
+                                <div class="invalid-tooltip">
+                                    ¡Debes Seleccionar la franja horaria!
+                                </div>
+                            </div>
+                            <div class="col-1 text-center">
+                                <label for="a" class="col-form-label text-start"> a </label>
+                            </div>
+                            <div class="col-2">
+                                <input id="HORA2" type="text" class="form-control" required>
+                                <div class="invalid-tooltip">
+                                    ¡Debes Seleccionar la franja horaria!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="OBSERVACION" class="col-12 position-relative">
+                        <div class="row">
+                            <label for="OBS" class="col-sm-3 col-form-label text-start">Observaciones:</label>
+                            <div class="input-group mb-3">
+                                <textarea class="form-control" id="OBS" rows="2"
+                                    aria-describedby="button-addon2"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 pt-2">
+                        <div class="row">
+                            <div class="col-6 d-grid gap-2">
+
+                                <div id="BOTONGENERAR" class="col d-grid gap-2">
+                                    <button id="GENERAR" type="submit" class="btn btn-success">GENERAR</button>
+                                </div>
+
+                                <div id="SPINNER" class="col d-grid gap-2">
+                                    <button class="btn btn-success" type="button" disabled>
+                                        <span class="spinner-border spinner-border-sm" role="status"
+                                            aria-hidden="true"></span>GENERANDO...</button>
+                                </div>
+
+                            </div>
+                            <div class="col-6 d-grid gap-2">
+                                <button id="BORRAR" type="button" class="btn btn-danger">BORRAR</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <!--------------------------------------------------------------------------------------------------------------------------------------------------->
+            <div class="col-md-4 pt-3 pb-5" style="background-color: #979EB8">
+
+                <div class="row">
+                    <div class="col-12 position-relative">
+                        <div class="row">
+                            <label for="TEXTO" class="col-sm-12 col-form-label fw-bold text-start">Cuerpo del
+                                mensaje:</label>
+                            <div class="col-sm-10 offset-sm-1">
+                                <textarea class="form-control" id="TEXTO" rows="18"></textarea>
+                            </div>
+                            <div class="col-sm-10 offset-sm-1 d-grid gap-2">
+                                <button type="button" class="btn btn-primary" id="COPIAR1">COPIAR</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 position-relative pt-2">
+                        <div class="col-sm-10 offset-sm-1 d-grid gap-2">
+                            <button type="button" class="btn btn-success" id="ENVIAR">whatsapp</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row" style="background-color: #335EFF;">
+            <!--------------------------------------- FOOTER ------------------------->
+            <div class="col align-self-center">
+                <div class="row mt-3">
+                    <div class="col-sm-12 ">
+                        <h6 style="color:white">Desarrollado por Gestion de Procesos y Servicios S.A. al servicio de
+                            TELECENTRO</h6>
+                    </div>
+                    <div class="row mt-">
+                        <div class="col-sm-6 offset-sm-3">
+                            <h6 style="color:white">By Ing. Ignacio Velazquez</h6>
+                            <h6 style="color:white">jvelazquez@gdp.com.ar</h6>
+                        </div>
+                        <div class="col-sm-1 offset-sm-2">
+                            <h5 style="color:white">V1.0</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+            integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+            crossorigin="anonymous"></script>
+
+        <!---------- Para Visual ---------------------->
+        <script src="./JavaScript.html.js"></script>
+        <!---------- Para GAS ---------------------->
+        <!--<?!= include('JavaScript'); ?>-->
+
+</body>
+
+</html>
