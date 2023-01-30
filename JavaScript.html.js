@@ -82,11 +82,17 @@ document.getElementById("FORMULARIO").addEventListener('submit', () => {
     GESTION = document.getElementById("GESTION").value;
     CONTRATISTA = document.getElementById("CONTRATISTA").value;
     TECNICO = document.getElementById("TECNICO").value;
-    FECHA = `${hoy}-${mes}-${anio}`;
     HORA1 = document.getElementById("HORA1").value;
     HORA2 = document.getElementById("HORA2").value;
     HORA = new Date().toLocaleString();
     OBS = document.getElementById("OBS").value;
+
+    FECHA = document.getElementById("FECHA").value;
+    let year = FECHA.slice(0, -6)
+    let month = FECHA.slice(5, -3)
+    let day = FECHA.slice(-2)
+    FECHA = `${day}-${month}-${year}`;
+
 
     switch (check) {
         case 1:
